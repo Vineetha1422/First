@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel = "stylesheet" href = "css/Image_change.css">
+   <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+   <script src="js/Image_change.js"> </script>
+   
+   <title>Color it!</title>
+</head>
+<body style = "font-family: 'Piazzolla', serif;
+	background-color:#EEEEEE;
+	margin:0 auto;">
+    <div id = "svg_section">
+        <svg width="450" height="250">
+        <!--<circle cx="50" cy="50" r="50" />-->
+        <path d="M0,0 a1,1 0 0,0 450,0" fill="#00adb5" />
+		<text x = '155' y = '110' fill = '#222831' font-size = "40px">Color It!</text>
+        </svg>
+	</div>
+    <div id = "main_cont">
+	    <h4 style = "text-align: center;padding-top: 136px;font-size: 23px;" id = "text_ch"> Choose one </h4>
+		<div class = "container">
+		    <div class = "row">
+			    <div class = "col-md-3 col-xs-3" align = "center">
+				    <img src = "images/leafman.jpg" alt = "leafman" onclick = "changeme(this.src , this.alt)">
+				</div>
+				<div class = "col-md-3 col-xs-3" align = "center">
+				    <img src = "images/Naruto.jpg" alt = "Naruto" onclick = "changeme(this.src , this.alt)">
+				</div>
+				<div class = "col-md-3 col-xs-3" align = "center">
+				    <img src = "images/girl.jpg" alt = "girl" onclick = "changeme(this.src , this.alt)">	
+				</div>
+				<div class = "col-md-3 col-xs-3" align = "center">
+				    <img src = "images/rokuro.jpg" alt = "rokuro" onclick = "changeme(this.src , this.alt)">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id = "result_cont">
+	    <img src = "images/leafman.jpg" alt = "temp" id = "img_change">
+		<button id = "change_button" onclick = "colorIt(document.getElementById('img_change').alt)">Change</button>
+		<a href = "Image_change.html" style = "display: block;;text-decoration: none;">Go Back</a>
+	</div>
+	
+	<div style = "margin-top:10px">
+	<p style = "text-align : right">@VOW</p>
+	</div>
+</body>
+</html>
+
+
+<!--Okay So far we have done the basic layout of our Image_change thingy.
+Key takeaways from this tiny project :
+1. Used Svg efficiently - a semi circle!
+2. Also another Svg - text 
+3. Responsive website. 
